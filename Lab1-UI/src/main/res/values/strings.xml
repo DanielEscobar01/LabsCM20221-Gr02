@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Labs20221-Gr02</string>
+    <string name="personal_information_data_title">Personal Information</string>
+    <string name="name_label">Name</string>
+    <string name="last_name_label">Last Name</string>
+    <string name="gender_label">Gender</string>
+    <string name="male_gender">Male</string>
+    <string name="female_gender">Female</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="educational_level_label">Educational Level</string>
+    <string-array name="educational_levels">
+        <item>Elementary</item>
+        <item>High School</item>
+        <item>University</item>
+        <item>Other</item>
+    </string-array>
+</resources>
