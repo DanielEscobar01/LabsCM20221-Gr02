@@ -14,4 +14,10 @@
         <item>Universitaria</item>
         <item>Otro</item>
     </string-array>
+    <string name="contact_information_label">Informacion de Contacto</string>
+    <string name="phone_number">Telefono</string>
+    <string name="email">Email</string>
+    <string name="country_label">Pais</string>
+    <string name="city_label">Ciudad</string>
+
 </resources>

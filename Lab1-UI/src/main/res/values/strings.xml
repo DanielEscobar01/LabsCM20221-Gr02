@@ -14,4 +14,9 @@
         <item>University</item>
         <item>Other</item>
     </string-array>
+    <string name="contact_information_label">Contact Information</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="country_label">Country</string>
+    <string name="city_label">City</string>
 </resources>

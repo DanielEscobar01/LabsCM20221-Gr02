@@ -1,180 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    android:verticalScrollbarPosition="right">
+    android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/personal_information_label"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
-        android:layout_marginTop="@dimen/margin_wide"
-        android:layout_marginEnd="@dimen/margin_wide"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/personal_information_data_title"
-        android:textSize="@dimen/title_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right">
 
-    <EditText
-        android:id="@+id/name_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto"
-        android:hint="@string/name_label"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="@dimen/minimum_height_input"
-        android:textSize="@dimen/regular_text_size"
-        app:layout_constraintStart_toEndOf="@+id/name_label"
-        app:layout_constraintTop_toBottomOf="@+id/personal_information_label"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <TextView
-        android:id="@+id/name_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/name_label"
-        android:textSize="@dimen/title_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/name_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name_input" />
-
-    <TextView
-        android:id="@+id/last_name_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/last_name_label"
-        android:textSize="@dimen/title_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/last_name_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/last_name_input" />
-
-    <EditText
-        android:id="@+id/last_name_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto"
-        android:hint="@string/last_name_label"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="@dimen/minimum_height_input"
-        android:textColorHint="#757575"
-        android:textSize="@dimen/regular_text_size"
-        app:layout_constraintEnd_toEndOf="@+id/name_input"
-        app:layout_constraintStart_toStartOf="@+id/name_input"
-        app:layout_constraintTop_toBottomOf="@+id/name_input"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <TextView
-        android:id="@+id/gender_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/gender_label"
-        android:textSize="@dimen/title_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/gender_group"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gender_group" />
-
-    <RadioGroup
-        android:id="@+id/gender_group"
-        android:layout_width="108dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/last_name_input"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/last_name_input"
-        app:layout_constraintTop_toBottomOf="@+id/last_name_input">
-
-        <RadioButton
-            android:id="@+id/male_button"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/personal_information_label"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:minHeight="@dimen/minimum_height_input"
-            android:text="@string/male_gender"
-            android:textSize="@dimen/regular_text_size" />
+            android:layout_marginStart="@dimen/margin_wide"
+            android:layout_marginTop="@dimen/margin_wide"
+            android:layout_marginEnd="@dimen/margin_wide"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/personal_information_data_title"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/female_button"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
             android:fontFamily="@font/roboto"
+            android:hint="@string/name_label"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
             android:minHeight="@dimen/minimum_height_input"
-            android:text="@string/female_gender"
             android:textSize="@dimen/regular_text_size"
-            tools:layout_editor_absoluteX="211dp"
-            tools:layout_editor_absoluteY="524dp" />
+            app:layout_constraintStart_toEndOf="@+id/name_label"
+            app:layout_constraintTop_toBottomOf="@+id/personal_information_label"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-    </RadioGroup>
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/name_label"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/name_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_input" />
+
+        <TextView
+            android:id="@+id/last_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/last_name_label"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/last_name_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/last_name_input" />
+
+        <EditText
+            android:id="@+id/last_name_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/last_name_label"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/minimum_height_input"
+            android:textColorHint="#757575"
+            android:textSize="@dimen/regular_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/name_input"
+            app:layout_constraintStart_toStartOf="@+id/name_input"
+            app:layout_constraintTop_toBottomOf="@+id/name_input"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/gender_label"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/gender_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gender_group" />
+
+        <RadioGroup
+            android:id="@+id/gender_group"
+            android:layout_width="108dp"
+            android:layout_height="98dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/last_name_input"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/last_name_input"
+            app:layout_constraintTop_toBottomOf="@+id/last_name_input">
+
+            <RadioButton
+                android:id="@+id/male_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:minHeight="@dimen/minimum_height_input"
+                android:text="@string/male_gender"
+                android:textSize="@dimen/regular_text_size" />
+
+            <RadioButton
+                android:id="@+id/female_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:minHeight="@dimen/minimum_height_input"
+                android:text="@string/female_gender"
+                android:textSize="@dimen/regular_text_size"
+                tools:layout_editor_absoluteX="211dp"
+                tools:layout_editor_absoluteY="524dp" />
+
+        </RadioGroup>
 
 
-    <TextView
-        android:id="@+id/date_of_birth_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/date_of_birth"
-        android:textSize="@dimen/title_text_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_group" />
+        <TextView
+            android:id="@+id/date_of_birth_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/date_of_birth"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_group" />
 
-    <DatePicker
-        android:id="@+id/date_input"
-        android:layout_width="283dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
-        android:fontFamily="@font/roboto"
-        android:textSize="@dimen/regular_text_size"
-        app:layout_constraintEnd_toEndOf="@+id/personal_information_label"
-        app:layout_constraintStart_toStartOf="@+id/date_of_birth_label"
-        app:layout_constraintTop_toBottomOf="@+id/date_of_birth_label" />
+        <DatePicker
+            android:id="@+id/date_input"
+            android:layout_width="283dp"
+            android:layout_height="127dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/regular_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/personal_information_label"
+            app:layout_constraintStart_toStartOf="@+id/date_of_birth_label"
+            app:layout_constraintTop_toBottomOf="@+id/date_of_birth_label" />
 
-    <TextView
-        android:id="@+id/educational_level_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/educational_level_label"
-        android:textSize="@dimen/title_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/educational_level_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/educational_level_input" />
+        <TextView
+            android:id="@+id/educational_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/educational_level_label"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/educational_level_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/educational_level_input" />
 
-    <Spinner
-        android:id="@+id/educational_level_input"
-        android:layout_width="176dp"
-        android:layout_height="@dimen/minimum_height_input"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:entries="@array/educational_levels"
-        android:fontFamily="@font/roboto"
-        android:textSize="@dimen/regular_text_size"
-        app:layout_constraintStart_toEndOf="@+id/educational_level_label"
-        app:layout_constraintTop_toBottomOf="@+id/date_input" />
+        <Spinner
+            android:id="@+id/educational_level_input"
+            android:layout_width="176dp"
+            android:layout_height="@dimen/minimum_height_input"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:entries="@array/educational_levels"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/regular_text_size"
+            app:layout_constraintStart_toEndOf="@+id/educational_level_label"
+            app:layout_constraintTop_toBottomOf="@+id/date_input" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
