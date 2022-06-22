@@ -14,6 +14,17 @@
         <item>Universitaria</item>
         <item>Otro</item>
     </string-array>
+    <string-array name="latin_american_countries">
+        <item>Colombia</item>
+        <item>Venezuela</item>
+        <item>Ecuador</item>
+        <item>Peru</item>
+        <item>Chile</item>
+        <item>Bolivia</item>
+        <item>Paraguay</item>
+        <item>Brasil</item>
+        <item>Argentina</item>
+    </string-array>
     <string name="contact_information_label">Informacion de Contacto</string>
     <string name="phone_number">Telefono</string>
     <string name="email">Email</string>
