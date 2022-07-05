@@ -60,18 +60,20 @@
             android:id="@+id/last_name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="332dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/last_name_label"
             android:textSize="@dimen/title_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/last_name_input"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/last_name_input" />
+            app:layout_constraintTop_toTopOf="@+id/last_name_input"
+            app:layout_constraintVertical_bias="0.523" />
 
         <EditText
             android:id="@+id/last_name_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:fontFamily="@font/roboto"
@@ -81,9 +83,8 @@
             android:minHeight="@dimen/minimum_height_input"
             android:textColorHint="#757575"
             android:textSize="@dimen/regular_text_size"
-            app:layout_constraintEnd_toEndOf="@+id/name_input"
-            app:layout_constraintStart_toStartOf="@+id/name_input"
-            app:layout_constraintTop_toBottomOf="@+id/name_input"
+            app:layout_constraintStart_toEndOf="@+id/last_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/personal_information_label"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <TextView
@@ -96,17 +97,17 @@
             android:textSize="@dimen/title_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/gender_group"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/gender_group" />
+            app:layout_constraintTop_toTopOf="@+id/gender_group"
+            app:layout_constraintVertical_bias="0.295" />
 
         <RadioGroup
             android:id="@+id/gender_group"
             android:layout_width="108dp"
             android:layout_height="98dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/last_name_input"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/last_name_input"
-            app:layout_constraintTop_toBottomOf="@+id/last_name_input">
+            app:layout_constraintEnd_toEndOf="@+id/name_input"
+            app:layout_constraintStart_toStartOf="@+id/name_input"
+            app:layout_constraintTop_toBottomOf="@+id/name_input">
 
             <RadioButton
                 android:id="@+id/male_button"
@@ -136,7 +137,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/date_of_birth"
             android:textSize="@dimen/title_text_size"
@@ -149,7 +149,6 @@
             android:layout_height="127dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
             android:fontFamily="@font/roboto"
@@ -163,17 +162,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/educational_level_label"
             android:textSize="@dimen/title_text_size"
-            app:layout_constraintBottom_toBottomOf="@+id/educational_level_input"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/educational_level_input" />
+            app:layout_constraintTop_toTopOf="@+id/educational_level_input"
+            app:layout_constraintVertical_bias="0.108" />
 
         <Spinner
             android:id="@+id/educational_level_input"
-            android:layout_width="176dp"
-            android:layout_height="@dimen/minimum_height_input"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:entries="@array/educational_levels"
@@ -191,6 +193,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/educational_level_input" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 

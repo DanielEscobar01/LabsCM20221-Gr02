@@ -30,5 +30,10 @@
     <string name="email">Email</string>
     <string name="country_label">Pais</string>
     <string name="city_label">Ciudad</string>
+    <string name="button_next">Siguiente</string>
+
+    <string name="dialog">Alerta</string>
+    <string name="message">Debe diligenciar nombre y apellido</string>
+    <string name="positive">Aceptar</string>
 
 </resources>
