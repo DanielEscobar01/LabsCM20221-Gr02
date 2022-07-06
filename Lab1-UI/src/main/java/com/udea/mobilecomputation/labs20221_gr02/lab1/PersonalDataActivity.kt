@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
-import androidx.core.view.get
 import androidx.core.view.isNotEmpty
-import java.util.*
+
 
 class PersonalDataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +22,7 @@ class PersonalDataActivity : AppCompatActivity() {
         val button:Button = findViewById(R.id.button_next)
         val name:EditText = findViewById(R.id.name_input)
         val lastName: EditText = findViewById(R.id.last_name_input)
+        val educationLevel: Spinner = findViewById(R.id.educational_level_input)
         val gender: RadioGroup = findViewById(R.id.gender_group)
         val date: DatePicker = findViewById(R.id.date_input)
         lateinit var radioButton: RadioButton
@@ -31,22 +31,19 @@ class PersonalDataActivity : AppCompatActivity() {
         button.setOnClickListener{
             if(name.text.isNotEmpty() && lastName.text.isNotEmpty() && date.isNotEmpty()) {
                 val intent = Intent(this, ContactDataActivity::class.java)
-                intent.putExtra("name", name.text.toString())
-                intent.putExtra("last_name", lastName.text.toString())
-
-
-                var birth_date:String = ""
-                var day = date.dayOfMonth
-                var month = date.month
-                var year = date.year
-
+                val birth_date: String
+                val day = date.dayOfMonth
+                val month = date.month
+                val year = date.year
                 birth_date = day.toString()+"/" + month.toString()+"/" + year.toString()
-                intent.putExtra("date", birth_date)
-
-                val selectedOption: Int = gender!!.checkedRadioButtonId
+                val selectedOption: Int = gender.checkedRadioButtonId
                 radioButton = findViewById(selectedOption)
 
+                intent.putExtra("name", name.text.toString())
+                intent.putExtra("last_name", lastName.text.toString())
+                intent.putExtra("date", birth_date)
                 intent.putExtra("gender", radioButton.text)
+                intent.putExtra("education", educationLevel.selectedItem.toString())
                 startActivity(intent)
             }else{
                 showDialog()

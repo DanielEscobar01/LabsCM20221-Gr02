@@ -5,14 +5,15 @@ import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isNotEmpty
 
 class ContactDataActivity : AppCompatActivity() {
+
+    //private val button: Button? = null
+    //lateinit var button: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_data)
@@ -21,7 +22,7 @@ class ContactDataActivity : AppCompatActivity() {
 
     private fun saveContact() {
 
-        val button: Button = findViewById(R.id.button_next)
+        val button:Button = findViewById(R.id.button_next)
         val phone: EditText = findViewById(R.id.phone_input)
         val email: EditText = findViewById(R.id.mail_input)
         val country: Spinner = findViewById(R.id.country_input)
@@ -30,14 +31,16 @@ class ContactDataActivity : AppCompatActivity() {
         val dataLastName = bundle?.getString("last_name")
         val dataDate = bundle?.getString("date")
         val dataGender = bundle?.getString("gender")
+        val dataEducation = bundle?.getString("education")
 
         button.setOnClickListener {
             if (phone.text.isNotEmpty() && email.text.isNotEmpty() && country.isNotEmpty()) {
                // Log.i(TAG,"El telefono del usuario es: "+phone.text)
-                Log.i(TAG, "El nombre del usuario es: $dataName")
-                Log.i(TAG, "El apellido del usuario es: $dataLastName")
-                Log.i(TAG, "El date del usuario es: $dataDate")
-                Log.i(TAG, "El genero del usuario es: $dataGender")
+                Log.i(TAG, "Información personal:")
+                Log.i(TAG, "$dataName $dataLastName")
+                Log.i(TAG, "$dataGender")
+                Log.i(TAG, "Nació el $dataDate")
+                Log.i(TAG, "$dataEducation")
             } else {
                 showDialog()
             }
