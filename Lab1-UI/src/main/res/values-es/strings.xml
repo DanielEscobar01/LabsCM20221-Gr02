@@ -33,7 +33,8 @@
     <string name="button_next">Siguiente</string>
 
     <string name="dialog">Alerta</string>
-    <string name="message">Debe diligenciar nombre y apellido</string>
+    <string name="messagePersonalActivity">Debe diligenciar nombre y apellido</string>
+    <string name="messageContactActivity">Debes completar la informacion de contacto</string>
     <string name="positive">Aceptar</string>
 
 </resources>

@@ -33,7 +33,9 @@
     <string name="button_next">Next</string>
 
     <string name="dialog">Warning</string>
-    <string name="message">You have to complete the name and last name information</string>
+    <string name="messagePersonalActivity">You have to complete the name and last name information</string>
+    <string name="messageContactActivity">You have to complete the contact information</string>
+
     <string name="positive">Acept</string>
 
 </resources>
