@@ -33,9 +33,13 @@ class ContactDataActivity : AppCompatActivity() {
         val dataGender = bundle?.getString("gender")
         val dataEducation = bundle?.getString("education")
 
+
         button.setOnClickListener {
             if (phone.text.isNotEmpty() && email.text.isNotEmpty() && country.isNotEmpty()) {
-               // Log.i(TAG,"El telefono del usuario es: "+phone.text)
+                Log.i(TAG, "Información de contacto:")
+                Log.i(TAG, "El telefono del usuario es: "+phone.text)
+                Log.i(TAG, "El email del usuario es: "+email.text)
+                Log.i(TAG, "El pais del usuario es: "+country.getSelectedItem().toString())
                 Log.i(TAG, "Información personal:")
                 Log.i(TAG, "$dataName $dataLastName")
                 Log.i(TAG, "$dataGender")
