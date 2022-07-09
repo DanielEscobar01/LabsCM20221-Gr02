@@ -35,6 +35,8 @@
     <string name="dialog">Alerta</string>
     <string name="messagePersonalActivity">Debe diligenciar nombre y apellido</string>
     <string name="messageContactActivity">Debes completar la informacion de contacto</string>
+    <string name="messageErrorDate">Tu fecha de nacimiento esta incorrecta</string>
+    <string name="contactInformation">Información de contacto:</string>
     <string name="positive">Aceptar</string>
 
 </resources>

@@ -35,6 +35,8 @@
     <string name="dialog">Warning</string>
     <string name="messagePersonalActivity">You have to complete the name and last name information</string>
     <string name="messageContactActivity">You have to complete the contact information</string>
+    <string name="messageErrorDate">You birth date is incorrect</string>
+    <string name="contactInformation">Contact information:</string>
     <string name="positive">Acept</string>
 
 </resources>

@@ -11,8 +11,6 @@ import androidx.core.view.isNotEmpty
 
 class ContactDataActivity : AppCompatActivity() {
 
-    //private val button: Button? = null
-    //lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,15 +34,18 @@ class ContactDataActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             if (phone.text.isNotEmpty() && email.text.isNotEmpty() && country.isNotEmpty()) {
-                Log.i(TAG, "Información de contacto:")
-                Log.i(TAG, "El telefono del usuario es: "+phone.text)
-                Log.i(TAG, "El email del usuario es: "+email.text)
-                Log.i(TAG, "El pais del usuario es: "+country.getSelectedItem().toString())
                 Log.i(TAG, "Información personal:")
                 Log.i(TAG, "$dataName $dataLastName")
-                Log.i(TAG, "$dataGender")
+                if(dataGender!=null) {
+                    Log.i(TAG, "$dataGender")
+                }
                 Log.i(TAG, "Nació el $dataDate")
                 Log.i(TAG, "$dataEducation")
+                Log.i(TAG, "Información de contacto:")
+                Log.i(TAG, "Teléfono: "+phone.text)
+                Log.i(TAG, "Email: "+email.text)
+                Log.i(TAG, "País: "+country.getSelectedItem().toString())
+
             } else {
                 showDialog()
             }
