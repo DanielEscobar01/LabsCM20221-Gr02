@@ -38,10 +38,8 @@ class PersonalDataActivity : AppCompatActivity() {
                 val year = date.year
                 val calendar: Calendar = Calendar.getInstance()
                 val yearCurrent: Int = calendar.get(Calendar.YEAR)
-                val monthCurrent: Int = calendar.get(Calendar.MONTH)
-                val dayCurrent: Int = calendar.get(Calendar.DAY_OF_MONTH)
 
-                if(year >= yearCurrent && month== monthCurrent && day==dayCurrent){
+                if(year >= yearCurrent){
                     showErrorDialog()
                 }else {
                     birth_date = day.toString() + "/" + month.toString() + "/" + year.toString()
